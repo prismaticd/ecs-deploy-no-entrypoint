@@ -3,7 +3,7 @@
 ARG1="First argument should be aws region ex: us-west-2"
 ARG2="Second argument should be the prefix of the task definition"
 
-if [ -z $2]; then
+if [ -z $2 ]; then
   echo ARG1;
   echo ARG2;
   exit 1;

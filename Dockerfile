@@ -22,6 +22,8 @@ RUN  mkdir tempfolder && \
      rm -rf tempfolder
 
 
+COPY scripts/ /usr/bin/
+
 ENTRYPOINT []
 
 
