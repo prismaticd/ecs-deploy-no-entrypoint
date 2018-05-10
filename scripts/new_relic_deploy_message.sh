@@ -27,9 +27,9 @@ deployment: {
   description: env.MSG_DESCRIPTION,
   user: env.MSG_USER,
   changelog: env.MSG_CHANGELOG
-}')
+}}')
 
-curl -X POST 'https://api.newrelic.com/v2/applications/${NR_APPLICATION_ID}/deployments.json' \
-       -H 'X-Api-Key:${NR_API_KEY}' -i \
-       -H 'Content-Type: application/json' \
-       -d ${JSON_MESSAGE}
+curl -X POST "https://api.newrelic.com/v2/applications/${NR_APPLICATION_ID}/deployments.json" \
+       -H "X-Api-Key:${NR_API_KEY}" -i \
+       -H "Content-Type: application/json" \
+       -d "${JSON_MESSAGE}"
