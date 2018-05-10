@@ -18,7 +18,7 @@ RUN  mkdir tempfolder && \
 RUN  mkdir tempfolder && \
      curl -L https://api.github.com/repos/course-hero/slacktee/tarball | tar xvz -C tempfolder --strip-components=1 && \
      mv tempfolder/slacktee.sh /usr/bin/slacktee && \
-     chmod +x /usr/bin/ecs-deploy && \
+     chmod +x /usr/bin/slacktee && \
      rm -rf tempfolder
 
 
