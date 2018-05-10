@@ -18,7 +18,7 @@ if [ -z ${MSG_USER} ];  then
     export MSG_USER=$(echo "${GITLAB_USER_LOGIN}");
 fi
 if [ -z ${MSG_CHANGELOG} ];  then
-    export MSG_USER=$(echo "${CI_COMMIT_MESSAGE}");
+    export MSG_CHANGELOG=$(echo "${CI_COMMIT_MESSAGE}");
 fi
 
 JSON_MESSAGE=$(jq -n '{
