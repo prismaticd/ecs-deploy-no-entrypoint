@@ -15,7 +15,7 @@ if [ -z ${MSG_DESCRIPTION} ];  then
     export MSG_DESCRIPTION=$(echo "${CI_COMMIT_SHA} pipeline https://gitlab.com/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_PATH}/pipelines/${CI_PIPELINE_ID}");
 fi
 if [ -z ${MSG_USER} ];  then
-    export MSG_USER=$(echo "${GITLAB_USER_LOGIN}");
+    export MSG_USER=$(echo "${GITLAB_USER_NAME}");
 fi
 if [ -z ${MSG_CHANGELOG} ];  then
     export MSG_CHANGELOG=$(echo "${CI_COMMIT_MESSAGE}");
