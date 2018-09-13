@@ -16,5 +16,5 @@ if [ -z ${ENVIRONMENT_NAME} ]; then
     ENVIRONMENT_NAME="${CI_ENVIRONMENT_NAME}";
 fi
 
-printf "*Deploy to ${ENVIRONMENT_NAME} finished* \n by ${GITLAB_USER_NAME} \n v${RELEASE_ID}\n <https://gitlab.com/${CI_PROJECT_PATH}/pipelines/${CI_PIPELINE_ID}|Pipeline link>  \n" | slacktee  -u "${SLACK_USER}" -p -a "good" -c "${SLACK_CHANNEL}";
+printf "*Deploy to ${ENVIRONMENT_NAME} finished* \n by ${GITLAB_USER_NAME} \n v${RELEASE_ID}\n <${CI_PIPELINE_URL}|Pipeline link>  \n" | slacktee  -u "${SLACK_USER}" -p -a "good" -c "${SLACK_CHANNEL}";
 printf "commit: ${CI_COMMIT_SHA} \n by ${COMMIT_USER} \n ${CI_COMMIT_MESSAGE}\n" | slacktee  -u "${SLACK_USER}" -c "${SLACK_CHANNEL}";

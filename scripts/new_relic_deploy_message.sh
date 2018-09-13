@@ -12,7 +12,7 @@ if [ -z ${MSG_REVISION} ];  then
     export MSG_REVISION=$(echo "v${RELEASE_ID}");
 fi
 if [ -z ${MSG_DESCRIPTION} ];  then
-    export MSG_DESCRIPTION=$(echo "${CI_COMMIT_SHA} pipeline https://gitlab.com/${CI_PROJECT_NAMESPACE}/${CI_PROJECT_PATH}/pipelines/${CI_PIPELINE_ID}");
+    export MSG_DESCRIPTION=$(echo "${CI_COMMIT_SHA} pipeline ${CI_PIPELINE_URL}");
 fi
 if [ -z ${MSG_USER} ];  then
     export MSG_USER=$(echo "${GITLAB_USER_NAME}");
